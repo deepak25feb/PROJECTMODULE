@@ -4,13 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashScreen.GuestLogin">
+    tools:context=".SplashScreen.GuestLogin"
+    android:background="@color/white"
+    android:backgroundTint="#ff4569">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_margin="32dp"
+        android:id="@+id/gifImageView"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="GuestLogin"
-        tools:layout_editor_absoluteX="146dp"
-        tools:layout_editor_absoluteY="322dp" />
+        android:src="@drawable/googlesigningif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.gms.common.SignInButton
+
+        android:id="@+id/bt_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gifImageView" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

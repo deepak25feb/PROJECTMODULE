@@ -2,12 +2,15 @@ package com.example.tyitproject2020.SplashScreen;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.util.Log;
 import android.widget.Toast;
 
 import androidx.loader.content.AsyncTaskLoader;
+
+import com.example.tyitproject2020.HomePage.HomePageIndex;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,6 +20,9 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.security.spec.ECField;
+
+import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK;
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 
 public class AsynTaskLogin extends AsyncTask<URL,Integer,String> {
     String UID;
@@ -55,9 +61,16 @@ public class AsynTaskLogin extends AsyncTask<URL,Integer,String> {
     protected void onPostExecute(String s) {
         if(s.equals("true")){
             Toast.makeText(applicationContext,"LOGIN SUCCESSFULL",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(applicationContext, HomePageIndex.class);
+            intent.setFlags(FLAG_ACTIVITY_NEW_TASK | FLAG_ACTIVITY_CLEAR_TASK);  // FLAG_ACTIVITY_CLEAR_TASK : clear backstack activities maybe all.
+            // FLAG_ACTIVITY_NEW_TASK  : compulsory if you want to intent from outside the activity.
+            intent.putExtra("USERNAME",UID);
+            applicationContext.startActivity(intent);
+
+
         }
         else if(s.equals("")) {
-
+            //Toast.makeText(applicationContext,"FATAL ERROR , WEAK CONNECTION",Toast.LENGTH_SHORT).show();
         }
         else{
             Toast.makeText(applicationContext,"LOGIN UNSUCCESSFULL",Toast.LENGTH_SHORT).show();

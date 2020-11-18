@@ -2,6 +2,7 @@ package com.example.tyitproject2020.SplashScreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -69,7 +70,7 @@ public class StudentLogin extends AppCompatActivity {
                 }
 
                 if(!TextUtils.isEmpty(UID) && !TextUtils.isEmpty(PASSWORD) && uid_pattern.matcher(UID).matches()) {
-                    Toast.makeText(getApplicationContext(), "Logging Plese Wait!.......", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(StudentLogin.this, "Logging Please Wait!.......", Toast.LENGTH_SHORT).show();
                     Log.i("BEFORE ASYNCTASK STAUS",UID+"   "+ PASSWORD);
                     AsynTaskLogin task = new AsynTaskLogin(UID, PASSWORD, getApplicationContext());
                     task.execute();
