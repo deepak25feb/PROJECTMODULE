@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:itemBackground="#F85353"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_feedback_nav"
+            android:title="Send Feedback" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="Setting" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_baseline_logout_24"
+            android:title="Logout" />
+    </group>
+
+    <item android:title="Miscellaneous">
+        <menu>
+            <item
+                android:id="@+id/nav_listen"
+                android:icon="@drawable/ic_baseline_audiotrack_24"
+                android:title="Listen While Study" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_baseline_assignment_ind_24"
+                android:title="MISC" />
+        </menu>
+    </item>
+
+</menu>
