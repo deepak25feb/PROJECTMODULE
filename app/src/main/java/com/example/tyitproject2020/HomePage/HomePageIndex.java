@@ -62,6 +62,9 @@ public class HomePageIndex extends AppCompatActivity implements NavigationView.O
                     new HomeFragCourse()).commit();
         }
 
+
+
+
     } //oncreate ends here
 
 

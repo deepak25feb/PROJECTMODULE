@@ -3,7 +3,9 @@ package com.example.tyitproject2020.SplashScreen;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -34,6 +36,15 @@ public class GuestLogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guest_login);
+        //Shared prefrence for user Course tracking--------------
+
+
+
+
+
+
+
+
         //catch the UI object
         btnSignIn = findViewById(R.id.bt_sign_in);
 
@@ -95,6 +106,7 @@ public class GuestLogin extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
+                                    courseCompletionSession();
                                     startActivity(new Intent(GuestLogin.this,SigningFirebaseBuffer.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK));
                                     displayToast("FIREBASE AUTHENTICATION SUCCESSFULL");
                                     finish();
@@ -115,7 +127,16 @@ public class GuestLogin extends AppCompatActivity {
         Toast.makeText(getApplicationContext(),s,Toast.LENGTH_SHORT).show();
     }
 
-
+    void courseCompletionSession(){
+        SharedPreferences sharedPreferences = getSharedPreferences("IMAGE_DATA", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("IMAGE 1",R.drawable.ic_uncolorcheck);
+        editor.putInt("IMAGE 2",R.drawable.ic_uncolorcheck);
+        editor.putInt("IMAGE 3",R.drawable.ic_uncolorcheck);
+        editor.putInt("IMAGE 4",R.drawable.ic_uncolorcheck);
+        editor.putInt("IMAGE 5",R.drawable.ic_uncolorcheck);
+        editor.commit();
+    }
 
 
 }//MAIN ACTIVITY ENDS HERE

@@ -12,7 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TYITPROJECT2020"
         android:usesCleartextTraffic="true">
-        <activity android:name=".HomePage.YoutubeScreen"></activity>
+        <activity android:name=".HomePage.CourseContent.TYITcourse" android:theme="@style/Theme.AppCompat.Light.DarkActionBar"></activity>
+        <activity android:name=".HomePage.CourseContent.SYITcourse" android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITcourse"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity android:name=".HomePage.YoutubeScreen" />
         <activity android:name=".SplashScreen.SigningFirebaseBuffer" />
         <activity android:name=".HomePage.HomePageIndex" />
         <activity android:name=".SplashScreen.GuestLogin" />
@@ -29,6 +34,7 @@
         <activity android:name=".SplashScreen.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity> <!-- Main Activity is Home Activity -->
