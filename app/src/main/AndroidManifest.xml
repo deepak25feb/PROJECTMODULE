@@ -14,13 +14,7 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".HomePage.YoutubeScreen"></activity>
         <activity android:name=".SplashScreen.SigningFirebaseBuffer" />
-        <activity android:name=".HomePage.HomePageIndex">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".HomePage.HomePageIndex" />
         <activity android:name=".SplashScreen.GuestLogin" />
         <activity android:name=".SplashScreen.StudentLogin" />
         <activity android:name=".SplashScreen.Credential" />
@@ -33,13 +27,10 @@
             2 => Otherwise go to Main Activity (HOME ACTIVITY)
         -->
         <activity android:name=".SplashScreen.SplashScreen">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity> <!-- Main Activity is Home Activity -->
         <activity android:name=".MainActivity" />
     </application>

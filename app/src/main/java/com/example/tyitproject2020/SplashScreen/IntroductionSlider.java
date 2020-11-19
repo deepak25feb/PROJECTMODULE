@@ -5,16 +5,21 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.ContextCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.example.tyitproject2020.HomePage.HomePageIndex;
 import com.example.tyitproject2020.MainActivity;
 import com.example.tyitproject2020.R;
 import com.google.android.material.button.MaterialButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,11 +28,57 @@ public class IntroductionSlider extends AppCompatActivity {
     private OnboardingAdapter onboardingAdapter;
     private LinearLayout layoutOnboardingIndicator;
     private MaterialButton materialButton;
+    static IntroductionSlider introductionSlider;
+
+//    @Override
+//    protected void onStart() { //Session Tracking if and else ...............whether user is logged in or not
+//        super.onStart();
+//        SharedPreferences sharedPreferences = getSharedPreferences("Session_student", Context.MODE_PRIVATE);
+//        int i = sharedPreferences.getInt("Session_student",-1);
+//        FirebaseAuth firebaseAuth;
+//        firebaseAuth = FirebaseAuth.getInstance();
+//        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+//        if(firebaseUser != null){
+//            startActivity(new Intent(IntroductionSlider.this, HomePageIndex.class));
+//            finish();
+//        }
+//        if(i==1){
+//            //Session Persist
+//            startActivity(new Intent(IntroductionSlider.this, HomePageIndex.class));
+//            finish();
+//        }else{}
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_introduction_slider);
+        introductionSlider = this;
+
+        //SESSION MANAGEMENT
+        //--------------------------------------------------
+        SharedPreferences sharedPreferences = getSharedPreferences("Session_student", Context.MODE_PRIVATE);
+        int i = sharedPreferences.getInt("session_number",-1);
+        FirebaseAuth firebaseAuth;
+        firebaseAuth = FirebaseAuth.getInstance();
+        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+        if(firebaseUser != null){
+            startActivity(new Intent(IntroductionSlider.this, HomePageIndex.class));
+            finish();
+        }
+        if(i != -1){        //if logout is clicked  then i becomes -1
+            //Session Persist
+            startActivity(new Intent(IntroductionSlider.this, HomePageIndex.class));
+            finish();
+        }else{}
+        //---------------------------------------------------------------------
+
+
+
+
+
+
+
 
 
         //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
@@ -38,12 +89,12 @@ public class IntroductionSlider extends AppCompatActivity {
 
         // called the constructor of OnboardingAdapter
         setOnboardingItems();
-        // till now only list is populated.
+        // till now only list is populated. ---list of image resid
 
         ViewPager2 pager = findViewById(R.id.onboardingViewPager);
 
         //calls Adapter oncreateviewHolder
-        pager.setAdapter(onboardingAdapter);
+        pager.setAdapter(onboardingAdapter);   //this setOnboardingItems(); populate the list
 
         //below setup small image view within linearlayout
         setupOnboardingIndicator();
@@ -64,7 +115,7 @@ public class IntroductionSlider extends AppCompatActivity {
         materialButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(pager.getCurrentItem()+1 < onboardingAdapter.getItemCount()){
+                if(pager.getCurrentItem()+1 < onboardingAdapter.getItemCount()){ //if pager.getCurrentItem()+1 == onboardingAdapter.getItemCount() It means that user is on last page
                     pager.setCurrentItem(pager.getCurrentItem()+1);
                 }else{
                     startActivity(new Intent(getApplicationContext(), Credential.class));
@@ -128,6 +179,12 @@ public class IntroductionSlider extends AppCompatActivity {
         }
 
 
+    }
+
+
+
+    public static IntroductionSlider getInstance(){
+        return   introductionSlider;
     }
 
 }

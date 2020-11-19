@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".SplashScreen.GuestLogin"
     android:background="@color/white"
-    android:backgroundTint="#ff4569">
+    android:backgroundTint="#ff4569"
+    android:layout_gravity="center">
 
     <pl.droidsonroids.gif.GifImageView
         android:layout_margin="32dp"

@@ -72,7 +72,7 @@ public class StudentLogin extends AppCompatActivity {
                 if(!TextUtils.isEmpty(UID) && !TextUtils.isEmpty(PASSWORD) && uid_pattern.matcher(UID).matches()) {
                     Toast.makeText(StudentLogin.this, "Logging Please Wait!.......", Toast.LENGTH_SHORT).show();
                     Log.i("BEFORE ASYNCTASK STAUS",UID+"   "+ PASSWORD);
-                    AsynTaskLogin task = new AsynTaskLogin(UID, PASSWORD, getApplicationContext());
+                    AsynTaskLogin task = new AsynTaskLogin(UID, PASSWORD, StudentLogin.this);
                     task.execute();
                 }
 

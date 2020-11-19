@@ -2,6 +2,7 @@ package com.example.tyitproject2020.SplashScreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +30,7 @@ public class Credential extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Credential.this,StudentLogin.class);
                 startActivity(intent);
+                IntroductionSlider.getInstance().finish();
             }
         });
     }

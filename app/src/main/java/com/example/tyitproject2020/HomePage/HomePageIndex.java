@@ -59,7 +59,7 @@ public class HomePageIndex extends AppCompatActivity implements NavigationView.O
         // ByDefault frag view when first opened................. without clicking ..NOTE : Frag+Bottom Navigation have a tendency to store current state of UI
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new HomeFragYoutube(HomePageIndex.this)).commit();
+                    new HomeFragCourse()).commit();
         }
 
     } //oncreate ends here
@@ -79,7 +79,7 @@ public class HomePageIndex extends AppCompatActivity implements NavigationView.O
                 break;
             case R.id.nav_logout:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new LogoutFrag()).commit();
+                        new LogoutFrag(HomePageIndex.this)).commit();
                 break;
             case R.id.nav_listen:
                 Toast.makeText(this, "JUMP TO AUDIO ACTIVITY", Toast.LENGTH_SHORT).show();

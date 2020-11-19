@@ -22,7 +22,7 @@ public class YoutubeScreen extends YouTubeBaseActivity implements YouTubePlayer.
         intent = getIntent();
         VideoId = intent.getStringExtra("VideoID");
         youTubePlayerView = findViewById(R.id.player);
-        youTubePlayerView.initialize("AIzaSyDWHnhhoR8gF6bMDi_NrXBoJRUgBhsaOHo",this);
+        youTubePlayerView.initialize("AIzaSyAjc9BmYpKwejVIK2N8xjViu-vmgkAnajM",this); //REMEMBER TO CHANGE KEY FROM HERE AS WELL
     } // oncreate ends here
 
     @Override

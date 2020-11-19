@@ -51,7 +51,7 @@ public class GuestLogin extends AppCompatActivity {
         googleSignInClient = GoogleSignIn.getClient(GuestLogin.this, googleSignInOptions);
 
 
-        //googleSignInClient will be tiggered when button is clicked
+        //googleSignInClient will be tiggered when google  button is clicked
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -95,8 +95,9 @@ public class GuestLogin extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    startActivity(new Intent(GuestLogin.this,SigningFirebaseBuffer.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                                    startActivity(new Intent(GuestLogin.this,SigningFirebaseBuffer.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK));
                                     displayToast("FIREBASE AUTHENTICATION SUCCESSFULL");
+                                    finish();
                                 } else {
                                     displayToast("FIREBASE AUTHENTICATION FAILED" + task.getException().getMessage() );
                                 }

@@ -3,6 +3,7 @@ package com.example.tyitproject2020.SplashScreen;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.util.Log;
@@ -30,6 +31,7 @@ public class AsynTaskLogin extends AsyncTask<URL,Integer,String> {
     Context applicationContext;
     private static String urlRequest;
     Handler handler;
+    SharedPreferences sharedPreferences;
 
     //Constructor
     public AsynTaskLogin(String UID, String Password, Context applicationContext){
@@ -61,10 +63,15 @@ public class AsynTaskLogin extends AsyncTask<URL,Integer,String> {
     protected void onPostExecute(String s) {
         if(s.equals("true")){
             Toast.makeText(applicationContext,"LOGIN SUCCESSFULL",Toast.LENGTH_SHORT).show();
+            sharedPreferences = applicationContext.getSharedPreferences("Session_student",Context.MODE_PRIVATE); //Name of the XML file
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putInt("session_number",1);
+
             Intent intent = new Intent(applicationContext, HomePageIndex.class);
             intent.setFlags(FLAG_ACTIVITY_NEW_TASK | FLAG_ACTIVITY_CLEAR_TASK);  // FLAG_ACTIVITY_CLEAR_TASK : clear backstack activities maybe all.
             // FLAG_ACTIVITY_NEW_TASK  : compulsory if you want to intent from outside the activity.
-            intent.putExtra("USERNAME",UID);
+            editor.putString("UIDNAME",UID);
+            editor.commit();
             applicationContext.startActivity(intent);
 
 

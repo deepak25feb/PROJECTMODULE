@@ -73,7 +73,7 @@ public class HomeFragYoutube extends Fragment {
 
     private void fetchdata(){
         RequestQueue requestQueue = Volley.newRequestQueue(context);
-        String link = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCjEnh14bDYKXjO6I1I54McQ&maxResults=30&key=AIzaSyDWHnhhoR8gF6bMDi_NrXBoJRUgBhsaOHo";
+        String link = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCjEnh14bDYKXjO6I1I54McQ&maxResults=30&key=AIzaSyAjc9BmYpKwejVIK2N8xjViu-vmgkAnajM";
         //String link = "https://www.googleapis.com/youtube/v3/search?part=snippet&resultsPerPage=10&key=AIzaSyDlRiy6zK9ra0OYp0iGhh7t3DokRhdhaHs";
         StringRequest stringRequest = new StringRequest(Request.Method.GET, link, new Response.Listener<String>() {
             @Override
@@ -108,6 +108,10 @@ public class HomeFragYoutube extends Fragment {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(context, "NO INTERNET", Toast.LENGTH_SHORT).show();
+                //NO INTERNET FRAGMENT
+                NoInternetInflator noInternet = new NoInternetInflator();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        noInternet).commit();
             }
         });
 
