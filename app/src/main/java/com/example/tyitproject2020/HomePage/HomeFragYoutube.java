@@ -115,7 +115,7 @@ public class HomeFragYoutube extends Fragment {
             }
         });
 
-        requestQueue.add(stringRequest);
+        requestQueue.add(stringRequest);   //main method id this for requesting
 
     }
 }

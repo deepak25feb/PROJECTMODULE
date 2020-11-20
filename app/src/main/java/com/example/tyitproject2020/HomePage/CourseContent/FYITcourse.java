@@ -12,7 +12,7 @@ import com.example.tyitproject2020.HomePage.CourseContent.FYITfrags.FYITcommonFr
 import com.example.tyitproject2020.HomePage.CourseContent.FYITfrags.FYITcommonFragSub4;
 import com.example.tyitproject2020.HomePage.CourseContent.FYITfrags.FYITcommonFragSub5;
 import com.example.tyitproject2020.R;
-
+//THIS NEW activity host FYIT fragments.
 public class FYITcourse extends AppCompatActivity {
 
     @Override
@@ -26,27 +26,27 @@ public class FYITcourse extends AppCompatActivity {
 //        getSupportActionBar().setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(),R.drawable.banner1));
         if(id.equals("SB101")) {
             FYITcommonFragSub1 frag = new FYITcommonFragSub1();
-            getSupportFragmentManager().beginTransaction().add(R.id.courseFrame, frag).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.courseFrame, frag).commit();
             return;
         }
         if(id.equals("SB102")) {
             FYITcommonFragSub2 frag = new FYITcommonFragSub2();
-            getSupportFragmentManager().beginTransaction().add(R.id.courseFrame, frag).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.courseFrame, frag).commit();
             return;
         }
         if(id.equals("SB103")) {
             FYITcommonFragSub3 frag = new FYITcommonFragSub3();
-            getSupportFragmentManager().beginTransaction().add(R.id.courseFrame, frag).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.courseFrame, frag).commit();
             return;
         }
         if(id.equals("SB104")) {
             FYITcommonFragSub4 frag = new FYITcommonFragSub4();
-            getSupportFragmentManager().beginTransaction().add(R.id.courseFrame, frag).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.courseFrame, frag).commit();
             return;
         }
         if(id.equals("SB201")) {
             FYITcommonFragSub5 frag = new FYITcommonFragSub5();
-            getSupportFragmentManager().beginTransaction().add(R.id.courseFrame, frag).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.courseFrame, frag).commit();
             return;
         }
 

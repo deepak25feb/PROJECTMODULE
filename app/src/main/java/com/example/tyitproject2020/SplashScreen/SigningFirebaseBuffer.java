@@ -2,6 +2,10 @@ package com.example.tyitproject2020.SplashScreen;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,10 +29,12 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class SigningFirebaseBuffer extends AppCompatActivity {
     ImageView ivImage;
+
     TextView tvName;
     Button btLogout;
     FirebaseAuth firebaseAuth;
     GoogleSignInClient googleSignInClient;
+    boolean b = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +51,14 @@ public class SigningFirebaseBuffer extends AppCompatActivity {
             tvName.setText(firebaseUser.getDisplayName());
         }
 
+
+
+
+
+
+
+
+
         googleSignInClient = GoogleSignIn.getClient(SigningFirebaseBuffer.this, GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN);
         btLogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,7 +68,9 @@ public class SigningFirebaseBuffer extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
                             firebaseAuth.signOut();
+                            b= false;
                             Toast.makeText(SigningFirebaseBuffer.this, "LOGOUT SUCCESSFULL", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(SigningFirebaseBuffer.this,Credential.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                             finish();
                         }
                     }
@@ -63,15 +79,17 @@ public class SigningFirebaseBuffer extends AppCompatActivity {
         });
 
 
-        Handler handler = new Handler();
-        Runnable run = new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(SigningFirebaseBuffer.this, HomePageIndex.class));
-                finish();
-            }
-        };
-        handler.postDelayed(run,2500);
+            Handler handler = new Handler();
+            Runnable run = new Runnable() {
+                @Override
+                public void run() {
+
+                    startActivity(new Intent(SigningFirebaseBuffer.this, HomePageIndex.class));
+                    finish();
+                }
+            };
+            handler.postDelayed(run, 2500);
+
     }
 
 

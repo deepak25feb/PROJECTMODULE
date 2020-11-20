@@ -75,9 +75,9 @@ public class GuestLogin extends AppCompatActivity {
 
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
         //session code
-        if(firebaseUser !=null){
-            startActivity(new Intent(GuestLogin.this, SigningFirebaseBuffer.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-        }
+//        if(firebaseUser !=null){
+//            startActivity(new Intent(GuestLogin.this, SigningFirebaseBuffer.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+//        }
 
 
 

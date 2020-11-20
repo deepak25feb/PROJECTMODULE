@@ -12,8 +12,160 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TYITPROJECT2020"
         android:usesCleartextTraffic="true">
-        <activity android:name=".HomePage.CourseContent.TYITcourse" android:theme="@style/Theme.AppCompat.Light.DarkActionBar"></activity>
-        <activity android:name=".HomePage.CourseContent.SYITcourse" android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity android:name=".HomePage.CourseContent.FYITfrags.Sub5Unit4.Classes_and_Objects_in_python" android:theme="@style/Theme.AppCompat.Light.DarkActionBar" ></activity>
+        <activity android:name=".HomePage.CourseContent.FYITfrags.Sub5Unit4.Working_with_Files" android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity android:name=".HomePage.CourseContent.FYITfrags.Sub5Unit3.Templates" android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity android:name=".HomePage.CourseContent.FYITfrags.Sub5Unit3.Exception_Handling" android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity android:name=".HomePage.CourseContent.FYITfrags.Sub5Unit2.Virtual_Functions" android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity android:name=".HomePage.CourseContent.FYITfrags.Sub5Unit2.Polymorphism" android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity android:name=".HomePage.CourseContent.FYITfrags.Sub5Unit2.Constructors_and_Destructors" android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity android:name=".HomePage.CourseContent.FYITfrags.Sub5Unit1.Classes_and_Objects" android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity android:name=".HomePage.CourseContent.FYITfrags.Sub5Unit1.Principles_of_OOPS" android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity android:name=".HomePage.CourseContent.FYITfrags.Sub5Unit1.Object_Oriented_Methodology" android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub4Unit4.Counting_and_Probability"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub4Unit3.Sequences_Mathematical_Induction_and_Recursion"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub4Unit3.Elementary_Number_Theory_and_Methods_of_Proof"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub4Unit2.Graphs_and_Trees"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub4Unit2.Relations"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub4Unit1.Functions"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub4Unit1.Set_Theory"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub4Unit1.Quantified_Statements"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub4Unit1.The_Logic_of_Compound_Statements"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub3Unit4.Multiple_Processor_Systems"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub3Unit4.Cloud"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub3Unit4.Virtualization"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub3Unit3.Protection_and_Security"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub3Unit3.Deadlocks"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub3Unit2.File_Systems"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub3Unit2.Memory_Management"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub3Unit1.Processes_and_Threads"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub3Unit1.User_interfaces"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub3Unit1.Principles_of_Input_Output"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub3Unit1.Compiler_Design"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub3Unit1.IntroductionOS"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub2Unit4.Shift_Register"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub2Unit4.Counters"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub2Unit3.Sequential_Circuits"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub2Unit3.Arithmetic_Circuits"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub2Unit2.Combinational_Logic_Circuits"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub2Unit2.KarnaughMaps"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub2Unit1.Logic_Gates"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub2Unit1.Arithmetic"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub2Unit1.Alphanumeric_codes"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub2Unit1.Number_System"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub1Unit4.FYITSUB4_subpart_Control_statements_in_python"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub1Unit4.FYITSUB4_subpart_Conditional_Statements_and_loops_in_python"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub1Unit4.FYITSUB4_subpart_Variables_and_Expressions_in_Python"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub1Unit4.FYITSUB4_subpart_Introduction_to_Python"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub1Unit3.FYITSUB3_subpart_Structures_and_Unions"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub1Unit3.FYITSUB3_subpart_Pointers"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub1Unit3.FYITSUB3_subpart_Arrays"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub1Unit2.FYITSUB2_subpart_Preprocessor"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub1Unit2.FYITSUB2_subpart_Program_structure"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub1Unit2.FYITSUB2_subpart_Functions"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub1Unit2.FYITSUB2_subpart_Conditional_Statements_and_Loops"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub1Unit1.FYITSUB1_subpart_Data_Input_and_output"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub1Unit1.FYITSUB1_subpart_Operators_and_Expressions"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub1Unit1.FYITSUB1_subpart_Fundamentals"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.FYITfrags.Sub1Unit1.FYITSUB1_subpart_Introduction"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.TYITcourse"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".HomePage.CourseContent.SYITcourse"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
         <activity
             android:name=".HomePage.CourseContent.FYITcourse"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
