@@ -8,7 +8,9 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -24,6 +26,7 @@ import com.google.android.material.navigation.NavigationView;
 public class HomePageIndex extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
     Fragment selectedFragment;
+    BottomNavigationView bottomNav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +39,8 @@ public class HomePageIndex extends AppCompatActivity implements NavigationView.O
 
 
         //------------------------Bottom Navigation Listner
-        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
+        bottomNav = findViewById(R.id.bottom_navigation);
+        bottomNav.setSelectedItemId(R.id.nav_course);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
         //------------------------
 
@@ -56,6 +60,29 @@ public class HomePageIndex extends AppCompatActivity implements NavigationView.O
         //--------------------------
 
 
+//        int intentFragment = getIntent().getIntExtra("feedback",-1);
+//
+//        switch (intentFragment){
+//            case 1:
+//
+//                Toast.makeText(this, ""+intentFragment, Toast.LENGTH_SHORT).show();
+//                break;
+//            default:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+//                new HomeFragCourse()).commit();
+//                Toast.makeText(this, ""+intentFragment, Toast.LENGTH_SHORT).show();
+//                break;
+//
+//        }
+
+//        if(intent1 != null){
+//            int local = intent1.getIntExtra("feedback",1);
+//            Toast.makeText(this, ""+local, Toast.LENGTH_SHORT).show();
+//            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+//                    new FeedBackFrag()).commit();
+//
+//        }
+
         // ByDefault frag view when first opened................. without clicking ..NOTE : Frag+Bottom Navigation have a tendency to store current state of UI
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
@@ -71,8 +98,10 @@ public class HomePageIndex extends AppCompatActivity implements NavigationView.O
     //Side Navigation Listner and based menu item selection fragment manager will transact the fragments accordingly
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//        int intentFragment = getIntent().getIntExtra("feedback",item.getItemId());
         switch (item.getItemId()) {
             case R.id.nav_feedback:
+
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new FeedBackFrag()).commit();
                 break;
@@ -88,7 +117,7 @@ public class HomePageIndex extends AppCompatActivity implements NavigationView.O
                 Toast.makeText(this, "JUMP TO AUDIO ACTIVITY", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_send:
-                Toast.makeText(this, "JUMP TO MISC ACITVITY", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Push yourself,\n because no \none else is going\n to do it for you. ", Toast.LENGTH_LONG).show();
                 break;
         }
         drawer.closeDrawer(GravityCompat.START); //onclick close the side navigation bar
@@ -102,6 +131,7 @@ public class HomePageIndex extends AppCompatActivity implements NavigationView.O
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
                     selectedFragment = null;
                     switch (item.getItemId()) {
                         case R.id.nav_vid:
